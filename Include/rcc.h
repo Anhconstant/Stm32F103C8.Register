@@ -1,5 +1,5 @@
-// #ifndef __REG_RCC_H__
-// #define __REG_RCC_H__
+#ifndef __RCC_H__
+#define __RCC_H__
 
 /* TypeDef stuct RCC start         */
 
@@ -266,13 +266,13 @@ typedef struct
 
     } CFGR2 ;
 
-} reg_RCC_TypeDef;
+} RCC_TypeDef;
 
 /* TypeDef stuct RCC end             */
 
 /* Define RCC address register start         */
 
-#define reg_RCC     ((reg_RCC_TypeDef *)0x40021000UL    )
+#define RCC     ((RCC_TypeDef *)0x40021000UL    )
 
 /* Define RCC address register end           */
 
@@ -282,37 +282,37 @@ typedef enum
 {
     HSE_OK = 0u,
     HSE_NOTOK
-} reg_HSE_Status;
+} HSE_Status;
 
 typedef enum
 {
     HSI_OK = 0u,
     HSI_NOTOK
-} reg_HSI_Status;
+} HSI_Status;
 /* Declare Type end                        */
 
 /* Declare Function start                   */
 
-reg_HSE_Status reg_HSE_Detect(void)     ;
+HSE_Status HSE_Detect(void)     ;
 
-reg_HSE_Status reg_HSE_Ready(void)      ;
+HSE_Status HSE_Ready(void)      ;
 
-reg_HSE_Status reg_HSE_On(void)         ;
+HSE_Status HSE_On(void)         ;
 
-reg_HSI_Status reg_HSI_Ready(void)      ;
+HSI_Status HSI_Ready(void)      ;
 
-reg_HSI_Status reg_HSI_On(void)         ;
+HSI_Status HSI_On(void)         ;
 
-void reg_Clock_Enable_GPIOA(void)       ;
+void Clock_Enable_GPIOA(void)       ;
 
-void reg_Clock_Enable_GPIOB(void)       ;
+void Clock_Enable_GPIOB(void)       ;
 
-void reg_Clock_Enable_GPIOC(void)       ;
+void Clock_Enable_GPIOC(void)       ;
 
-void reg_Clock_Enable_GPIOD(void)       ;
+void Clock_Enable_GPIOD(void)       ;
 
-void reg_Clock_Enable_GPIOE(void)       ;
+void Clock_Enable_GPIOE(void)       ;
 
 /* Declare Function end                   */
 
-// #endif
+#endif
