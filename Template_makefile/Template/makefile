@@ -8,7 +8,7 @@ TARGET = template
 # debug build?
 DEBUG = 1
 # optimization
-OPT = -Og
+OPT = -O0
 
 
 #######################################
@@ -21,11 +21,11 @@ BUILD_DIR = build
 # source
 ######################################
 # C sources
-C_SOURCES =  \
-Src/main.c \
-Src/stm32f10x_it.c \
-Src/system_stm32f10x.c  
-
+C_SOURCES =  Src/main.c
+C_SOURCES += Src/stm32f10x_it.c 
+C_SOURCES += Src/system_stm32f10x.c  
+#C_SOURCES += Src/stm32_gpio.c 
+C_SOURCES += Drivers/Custom/Src/stm32_gpio.c
 # ASM sources
 ASM_SOURCES =  \
 startup_stm32f103xb.s
@@ -83,7 +83,8 @@ AS_INCLUDES =
 C_INCLUDES =  \
 -IInc \
 -IDrivers/CMSIS/Device \
--IDrivers/CMSIS/Include
+-IDrivers/CMSIS/Include \
+-IDrivers/Custom/Inc
 
 
 # compile gcc flags
