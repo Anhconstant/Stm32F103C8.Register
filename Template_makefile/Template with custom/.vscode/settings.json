@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "stm32f10x_fsmc.h": "c",
+        "stm32f10x.h": "c",
+        "stm32_main.h": "c",
+        "stm32_rcc.h": "c",
+        "delay.h": "c",
+        "stm32_gpio.h": "c",
+        "stm32_systick.h": "c",
+        "debug.h": "c",
+        "core_cm3.h": "c",
+        "stm32_uart.h": "c",
+        "stm32f10x_it.h": "c"
+    }
+}
