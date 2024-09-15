@@ -1,3 +1,8 @@
+/*
+@author - github : Anhconstant
+- MCU : stm32f103c8
+PERIPHERAL : GENERAL PURPOSE INPUT OUTPUT 
+*/
 #ifndef __GPIO_C__
 #define __GPIO_C__
 
@@ -10,7 +15,6 @@
 void GPIO_Init(GPIO_TypeDef *GPIO, unsigned int GPIO_PIN, GPIO_MODE GPIO_MODE)
 {
     int i;
-
     for (i = 0; i < 8; i++)
     {
         if (GPIO_PIN & 1 << i){ /*	GPIO_PIN & 1<<i: true neu khac 0 						    */

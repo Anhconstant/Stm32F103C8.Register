@@ -1,6 +1,5 @@
 /*
-@author: Tran Tuan Anh 
-@github: Anhconstant
+@author - github : Anhconstant
 - MCU : stm32f103c8
 PERIPHERAL : GENERAL PURPOSE INPUT OUTPUT 
 */
