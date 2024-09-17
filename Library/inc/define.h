@@ -1,3 +1,8 @@
+/*
+@author - github: Anhconstant
+- MCU : stm32f103c8
+LIBRATY : DEFINE
+*/
 #ifndef __DEFINE_H__
 #define __DEFINE_H__
 

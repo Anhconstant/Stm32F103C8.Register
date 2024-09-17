@@ -45,7 +45,7 @@ void USART_Disable(USART_TypeDef* UART ){
 }
 void USART_Write(USART_TypeDef* UART,unsigned char u8data){
     UART->DR = u8data;
-    while(!(UART->SR&USART_SR_TC));
+    while(!((UART->SR)&(USART_SR_TC)));
     //UART->SR &= ~USART_SR_TC;
 }
 void USART_Send(USART_TypeDef* UART,unsigned char u8data[],unsigned long size){

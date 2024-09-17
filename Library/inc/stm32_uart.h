@@ -3,7 +3,34 @@
 - MCU : stm32f103c8
 PERIPHERAL : USART/UART
 */
+/*  
+    (Decription): 
+    TX  : Transmitter
+    RX  : Receiver
+/----------------------------------------------------------------------/
+    Baudrate ( bit/s): { 300, 1200, 2400, 4800 , 9600 , 14400 , 19200, 38400,
+                        57600, 115200, 230400, 460800, 921600, 1843200 }
 
+*/
+/*  PIN: USART1:
+        CTS :   PA11
+        RTS :   PA12
+        TX  :   PA9
+        RX  :   PA10
+        CK  :   PA8
+    PIN: USART2:
+        CTS :   PA0
+        RTS :   PA1
+        TX  :   PA2
+        RX  :   PA3
+        CK  :   PA4
+    PIN: USART3:
+        CTS :   PB13
+        RTS :   PB14
+        TX  :   PB10
+        RX  :   PB11
+        CK  :   PB12
+*/
 #ifndef __UART_H__
 #define __UART_H__
 #include "stm32f10x.h"
@@ -45,9 +72,9 @@ void USART_Init(USART_TypeDef* USART, USART_MODE Mode, uint32_t baudrate,USART_P
 //void USART_Init()       ;
 void USART_Enable(USART_TypeDef* UART )  ;
 void USART_Disable(USART_TypeDef* UART ) ;
-void USART_Write(USART_TypeDef* UART,unsigned char u8data)  ;
-void USART_Send(USART_TypeDef* UART,unsigned char u8data[],unsigned long size)  ;
-void USART_Int_Enable(USART_TypeDef* UART, USART_Interrupt interrupt) ;
+void USART_Write(USART_TypeDef* UART,unsigned char u8data)  ;                       /*  Write 1 byte data       */
+void USART_Send(USART_TypeDef* UART,unsigned char u8data[],unsigned long size)  ;   /*  Send n byte data        */
+void USART_Int_Enable(USART_TypeDef* UART, USART_Interrupt interrupt) ;             /*  Enable Interrupt UART   */
 
 
 #endif
