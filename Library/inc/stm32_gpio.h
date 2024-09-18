@@ -45,17 +45,17 @@ typedef enum
     General_Output_PP_10mhz     =   (0 << 2) | 1,               // 0001
     General_Output_OD_10mhz     =   (1 << 2) | 1,               // 0101
     Alternate_Output_PP_10mhz   =   (2 << 2) | 1,               // 1001
-    Alternate_Output_OP_10mhz   =   (3 << 2) | 1,               // 1101
+    Alternate_Output_OD_10mhz   =   (3 << 2) | 1,               // 1101
 
     General_Output_PP_2mhz      =   (0 << 2) | 2,               // 0010
     General_Output_OD_2mhz      =   (1 << 2) | 2,               // 0110
     Alternate_Output_PP_2mhz    =   (2 << 2) | 2,               // 1010
-    Alternate_Output_OP_2mhz    =   (3 << 2) | 2,               // 1110
+    Alternate_Output_OD_2mhz    =   (3 << 2) | 2,               // 1110
 
-    General_Output_PP_50mhz     =   (0 << 2) | 3,               // 0010
-    General_Output_OD_50mhz     =   (1 << 2) | 3,               // 0110
-    Alternate_Output_PP_50mhz   =   (2 << 2) | 3,               // 1010
-    Alternate_Output_OP_50mhz   =   (3 << 2) | 3,               // 1110
+    General_Output_PP_50mhz     =   (0 << 2) | 3,               // 0011
+    General_Output_OD_50mhz     =   (1 << 2) | 3,               // 0111
+    Alternate_Output_PP_50mhz   =   (2 << 2) | 3,               // 1011
+    Alternate_Output_OD_50mhz   =   (3 << 2) | 3,               // 1111
 
 } GPIO_MODE;
 

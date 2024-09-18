@@ -106,10 +106,10 @@ void SPI_ChipSelect_Init(GPIO_TypeDef* GPIO,uint32_t GPIO_PIN){
     }
 }
 void SPI_ChipSelect_Enable(GPIO_TypeDef* GPIO,uint32_t GPIO_PIN){
-    GPIO->BSRR  |=  GPIO_PIN    ;
+    GPIO->BSRR  |=  GPIO_PIN << 16   ;
 }
 void SPI_ChipSelect_Disable(GPIO_TypeDef* GPIO,uint32_t GPIO_PIN){
-    GPIO->BSRR  |=  GPIO_PIN    <<  16    ;
+    GPIO->BSRR  |=  GPIO_PIN    ;
 }
 /*  
     Decription - function : SPI_Int_Enable
