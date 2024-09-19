@@ -53,16 +53,14 @@ void WriteGPIO(GPIO_TypeDef *GPIO, unsigned int GPIO_PIN, GPIO_STATE pin_state)
 
 void ToggleGPIO(GPIO_TypeDef *GPIO, unsigned int GPIO_PIN)
 {
-    unsigned odr = GPIO->ODR & GPIO_PIN;
-    if (odr != 0)
-        GPIO->BSRR |= GPIO_PIN<<16  ;
-    else
-        GPIO->BSRR |= GPIO_PIN      ;
+    unsigned int reset  = GPIO->ODR & GPIO_PIN ;    /*  get pin need reset    */
+    unsigned int set    = GPIO->ODR ^ GPIO_PIN ;    /*  get pin need set    */
+    GPIO->BSRR  =  reset<<16   |    set   ;
 }
 
 void ResetALL(GPIO_TypeDef *GPIO)
 {
-    GPIO->BSRR = GPIO_PIN_ALL;
+    GPIO->BRR = GPIO_PIN_ALL;
 }
 
 void SetALL(GPIO_TypeDef *GPIO)
