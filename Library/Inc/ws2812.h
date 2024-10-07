@@ -2,6 +2,11 @@
 #define __WS2812_H__
 #include "stm32f10x.h"
 #include "stdint.h"
+/*
+Decription : MCU stm32f103 
+System clock at 72mhz
+Need : 1 pin and 1 timer 
+*/
 #define PORT_default 	(GPIOA)
 #define PIN_default 	(1<<0)
 typedef struct{
