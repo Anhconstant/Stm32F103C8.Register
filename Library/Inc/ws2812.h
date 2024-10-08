@@ -2,13 +2,15 @@
 #define __WS2812_H__
 #include "stm32f10x.h"
 #include "stdint.h"
+#define PORT_default 	(GPIOA)
+#define PIN_default 	(1<<0)
+#define MAX_SIZE	10
 /*
 Decription : MCU stm32f103 
 System clock at 72mhz
 Need : 1 pin and 1 timer 
 */
-#define PORT_default 	(GPIOA)
-#define PIN_default 	(1<<0)
+
 typedef struct{
 	TIM_TypeDef* 	TIM		;
 	GPIO_TypeDef* 	IO_PORT	;
@@ -17,7 +19,7 @@ typedef struct{
 
 typedef struct{
 	uint32_t size	;
-	uint32_t data[]	;
+	uint32_t data[MAX_SIZE]	;
 }ws2812_data;
 
 static void delay_init(ws2812_InitStruct* ws2812);
