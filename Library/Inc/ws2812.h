@@ -12,7 +12,6 @@ Need : 1 pin and 1 timer
 */
 
 typedef struct{
-	TIM_TypeDef* 	TIM		;
 	GPIO_TypeDef* 	IO_PORT	;
 	uint16_t		IO_PIN	;
 }ws2812_InitStruct	;
